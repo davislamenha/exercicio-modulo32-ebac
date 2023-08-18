@@ -1,7 +1,13 @@
+import NavigationBar from './components/NavigationBar';
+import Header from './components/Header';
+import { GlobalStyle } from './styles';
+
 function App() {
   return (
     <>
-      <h1>Ola mundo</h1>
+      <GlobalStyle />
+      <Header />
+      <NavigationBar />
     </>
   );
 }
