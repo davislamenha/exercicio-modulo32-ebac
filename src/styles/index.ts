@@ -49,7 +49,7 @@ export const GreenButton = styled(Button)`
 
 export const YellowButton = styled(Button)`
   background: ${colors.yellow};
-  color: ${colors.black};
+  color: ${colors.grey};
   border-color: ${colors.yellow};
 
   &:hover {

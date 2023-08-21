@@ -14,4 +14,13 @@ export const TituloH1 = styled.h1`
   color: ${colors.white};
   letter-spacing: 3px;
   text-transform: uppercase;
+
+  @media (max-width: 767px) {
+    font-size: 36px;
+    letter-spacing: initial;
+  }
+
+  @media (max-width: 470px) {
+    font-size: 28px;
+  }
 `;

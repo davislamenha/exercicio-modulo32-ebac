@@ -1,4 +1,4 @@
-import { PhonePlus, Phone, Star } from '@phosphor-icons/react';
+import { UserPlus, UsersThree, Star } from '@phosphor-icons/react';
 import { Slide } from 'react-awesome-reveal';
 
 import { Button, GreenButton, YellowButton } from '../../styles';
@@ -10,13 +10,13 @@ const NavigationBar = () => (
       <List>
         <li>
           <GreenButton>
-            <PhonePlus weight="fill" size={20} />
+            <UserPlus weight="fill" size={20} />
             Adicionar Contato
           </GreenButton>
         </li>
         <li>
           <Button>
-            <Phone weight="fill" size={20} />
+            <UsersThree weight="fill" size={20} />
             Meus Contatos
           </Button>
         </li>

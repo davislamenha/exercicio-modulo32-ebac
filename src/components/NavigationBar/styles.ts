@@ -8,13 +8,18 @@ export const Nav = styled.nav`
 
 export const List = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 8px;
 
-  li a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  li {
+    width: min(100%, 200px);
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
   }
 `;
