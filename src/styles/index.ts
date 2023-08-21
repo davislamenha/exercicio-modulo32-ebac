@@ -44,6 +44,7 @@ export const GreenButton = styled(Button)`
   border-color: ${colors.green};
 
   &:hover {
+    border-color: ${colors.green};
     color: ${colors.green};
   }
 `;
@@ -54,6 +55,7 @@ export const YellowButton = styled(Button)`
   border-color: ${colors.yellow};
 
   &:hover {
+    border-color: ${colors.yellow};
     color: ${colors.yellow};
   }
 `;
@@ -63,6 +65,7 @@ export const RedButton = styled(Button)`
   border-color: ${colors.red};
 
   &:hover {
+    border-color: ${colors.red};
     color: ${colors.red};
   }
 `;

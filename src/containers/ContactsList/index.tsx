@@ -25,8 +25,12 @@ const ContactsList = () => {
             return (
               <tr key={id}>
                 <td>{name}</td>
-                <td>{email}</td>
-                <td>{phone}</td>
+                <td>
+                  <a href={`mailto:${email}`}>{email}</a>
+                </td>
+                <td>
+                  <a href={`tel:${phone}`}>{phone}</a>
+                </td>
                 <td className="contact-actions">
                   <RedButton>
                     <Trash weight="fill" size={24} />
