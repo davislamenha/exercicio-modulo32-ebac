@@ -6,5 +6,6 @@ export default {
   green: '#17b169',
   yellow: '#febe10',
   red: '#ba0021',
+  sky: '#00d2ff',
   gradient: 'linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%)',
 };

@@ -19,9 +19,9 @@ ul {
 `;
 
 export const Button = styled.a`
-  background: ${colors.primary};
-  color: ${colors.white};
-  border: 1px solid ${colors.primary};
+  background: ${colors.sky};
+  color: ${colors.grey};
+  border: 1px solid ${colors.sky};
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
   cursor: pointer;
@@ -35,6 +35,7 @@ export const Button = styled.a`
     background-color: initial;
     background-position: 0 0;
     color: ${colors.primary};
+    border-color: ${colors.primary};
   }
 `;
 
