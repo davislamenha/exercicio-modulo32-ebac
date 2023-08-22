@@ -3,7 +3,7 @@ import { Zoom } from 'react-awesome-reveal';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { edit, remove } from '../../store/reducers/contacts';
+import { edit, remove, switchFavorite } from '../../store/reducers/contacts';
 import ContactClass from '../../models/Contact';
 import * as S from './styles';
 import {
@@ -104,7 +104,10 @@ const Contact = ({
             <Button onClick={() => setEditing(true)}>
               <PencilSimple weight="fill" size={24} />
             </Button>
-            <YellowButton className={favorite ? 'active' : ''}>
+            <YellowButton
+              className={favorite ? 'active' : ''}
+              onClick={() => dispatch(switchFavorite(id))}
+            >
               <Star weight="fill" size={24} />
             </YellowButton>
           </Zoom>

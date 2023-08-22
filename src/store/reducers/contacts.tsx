@@ -55,8 +55,13 @@ const contactsReducer = createSlice({
         state.items[contactIndex] = action.payload;
       }
     },
+    switchFavorite: (state, action: PayloadAction<number>) => {
+      const contact = state.items.find(({ id }) => id === action.payload);
+
+      if (contact) contact.favorite = !contact.favorite;
+    },
   },
 });
 
-export const { edit, remove } = contactsReducer.actions;
+export const { edit, remove, switchFavorite } = contactsReducer.actions;
 export default contactsReducer.reducer;
