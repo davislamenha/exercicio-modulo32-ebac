@@ -13,12 +13,13 @@ export const Actions = styled.td`
     box-shadow: initial;
     background-color: transparent;
 
+    &:hover {
+      color: ${colors.grey};
+      opacity: 0.8;
+    }
+
     &.active {
       color: ${colors.yellow};
-
-      &:hover {
-        color: ${colors.grey};
-      }
     }
   }
 `;
