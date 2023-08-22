@@ -39,6 +39,13 @@ const contactsReducer = createSlice({
   name: 'contacts',
   initialState,
   reducers: {
+    remove: (state, action: PayloadAction<number>) => {
+      const contactIndex = state.items.findIndex(
+        ({ id }) => id === action.payload,
+      );
+
+      state.items.splice(contactIndex, 1);
+    },
     edit: (state, action: PayloadAction<ContactClass>) => {
       const contactIndex = state.items.findIndex(
         ({ id }) => id === action.payload.id,
@@ -51,5 +58,5 @@ const contactsReducer = createSlice({
   },
 });
 
-export const { edit } = contactsReducer.actions;
+export const { edit, remove } = contactsReducer.actions;
 export default contactsReducer.reducer;

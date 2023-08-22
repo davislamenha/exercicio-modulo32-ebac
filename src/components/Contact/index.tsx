@@ -3,7 +3,7 @@ import { Zoom } from 'react-awesome-reveal';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { edit } from '../../store/reducers/contacts';
+import { edit, remove } from '../../store/reducers/contacts';
 import ContactClass from '../../models/Contact';
 import * as S from './styles';
 import {
@@ -98,7 +98,7 @@ const Contact = ({
           </>
         ) : (
           <Zoom>
-            <RedButton>
+            <RedButton onClick={() => dispatch(remove(id))}>
               <Trash weight="fill" size={24} />
             </RedButton>
             <Button onClick={() => setEditing(true)}>
