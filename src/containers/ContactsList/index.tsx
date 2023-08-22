@@ -1,9 +1,8 @@
 import { RootReducer } from '../../store';
 import { useSelector } from 'react-redux';
-import { Trash, PencilSimple, Star } from '@phosphor-icons/react';
 
 import { MainContainer, Table, Title } from './styles';
-import { Button, RedButton, YellowButton } from '../../styles';
+import Contact from '../../components/Contact';
 
 const ContactsList = () => {
   const contacts = useSelector((state: RootReducer) => state.contacts.items);
@@ -24,24 +23,13 @@ const ContactsList = () => {
           {contacts.map(({ id, name, email, phone, favorite }) => {
             return (
               <tr key={id}>
-                <td>{name}</td>
-                <td>
-                  <a href={`mailto:${email}`}>{email}</a>
-                </td>
-                <td>
-                  <a href={`tel:${phone}`}>{phone}</a>
-                </td>
-                <td className="contact-actions">
-                  <RedButton>
-                    <Trash weight="fill" size={24} />
-                  </RedButton>
-                  <Button>
-                    <PencilSimple weight="fill" size={24} />
-                  </Button>
-                  <YellowButton className={favorite ? 'active' : ''}>
-                    <Star weight="fill" size={24} />
-                  </YellowButton>
-                </td>
+                <Contact
+                  id={id}
+                  name={name}
+                  email={email}
+                  phone={phone}
+                  favorite={favorite}
+                />
               </tr>
             );
           })}

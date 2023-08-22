@@ -18,7 +18,7 @@ ul {
 }
 `;
 
-export const Button = styled.a`
+export const Button = styled.button`
   background: ${colors.sky};
   color: ${colors.grey};
   border: 1px solid ${colors.sky};
@@ -67,5 +67,21 @@ export const RedButton = styled(Button)`
   &:hover {
     border-color: ${colors.red};
     color: ${colors.red};
+  }
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  text-align: center;
+  padding: 8px;
+  font-size: 16px;
+  transition: 0.3s all;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid ${colors.primary};
   }
 `;

@@ -9,19 +9,19 @@ const NavigationBar = () => (
     <Slide>
       <List>
         <li>
-          <GreenButton>
+          <GreenButton as={'a'}>
             <UserPlus weight="fill" size={20} />
             Adicionar Contato
           </GreenButton>
         </li>
         <li>
-          <Button>
+          <Button as={'a'}>
             <UsersThree weight="fill" size={20} />
             Meus Contatos
           </Button>
         </li>
         <li>
-          <YellowButton>
+          <YellowButton as={'a'}>
             <Star weight="fill" size={20} />
             Favoritos
           </YellowButton>

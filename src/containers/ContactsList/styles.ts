@@ -40,28 +40,6 @@ export const Table = styled.table`
   td {
     text-align: center;
     margin: auto 0;
-
-    &.contact-actions {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
-
-      a {
-        border: none;
-        box-shadow: initial;
-        background-color: transparent;
-
-        &.active {
-          color: ${colors.yellow};
-
-          &:hover {
-            color: ${colors.grey};
-          }
-        }
-      }
-    }
   }
 
   th {

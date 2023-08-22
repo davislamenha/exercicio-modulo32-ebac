@@ -1,8 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit';
-import Contact from '../../models/Contact';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import ContactClass from '../../models/Contact';
 
 interface ContactState {
-  items: Contact[];
+  items: ContactClass[];
 }
 
 const initialState: ContactState = {
@@ -38,7 +38,18 @@ const initialState: ContactState = {
 const contactsReducer = createSlice({
   name: 'contacts',
   initialState,
-  reducers: {},
+  reducers: {
+    edit: (state, action: PayloadAction<ContactClass>) => {
+      const contactIndex = state.items.findIndex(
+        ({ id }) => id === action.payload.id,
+      );
+
+      if (contactIndex >= 0) {
+        state.items[contactIndex] = action.payload;
+      }
+    },
+  },
 });
 
+export const { edit } = contactsReducer.actions;
 export default contactsReducer.reducer;
