@@ -16,7 +16,8 @@ export const List = styled.ul`
   li {
     width: min(100%, 200px);
 
-    a {
+    button {
+      width: 100%;
       display: flex;
       align-items: center;
       gap: 8px;

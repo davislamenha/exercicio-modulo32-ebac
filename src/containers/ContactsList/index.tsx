@@ -5,13 +5,24 @@ import { MainContainer, Table, Title } from './styles';
 import Contact from '../../components/Contact';
 import { Fade } from 'react-awesome-reveal';
 
-const ContactsList = () => {
+type Props = {
+  favorites?: boolean;
+};
+
+const ContactsList = ({ favorites }: Props) => {
   const contacts = useSelector((state: RootReducer) => state.contacts.items);
+
+  const contactsFilter = () => {
+    if (favorites) {
+      return contacts.filter((contact) => contact.favorite);
+    }
+    return contacts;
+  };
 
   return (
     <MainContainer>
       <Fade duration={2000}>
-        <Title>Meus Contatos</Title>
+        <Title>Meus {favorites ? 'Favoritos' : 'Contatos'}</Title>
         <Table>
           <thead>
             <tr>
@@ -22,7 +33,7 @@ const ContactsList = () => {
             </tr>
           </thead>
           <tbody>
-            {contacts.map(({ id, name, email, phone, favorite }) => {
+            {contactsFilter().map(({ id, name, email, phone, favorite }) => {
               return (
                 <tr key={id}>
                   <Contact
