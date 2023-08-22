@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import colors from '../../styles/colors';
+import { YellowButton } from '../../styles';
 
 export const Actions = styled.td`
   display: flex;
@@ -13,13 +14,15 @@ export const Actions = styled.td`
     box-shadow: initial;
     background-color: transparent;
 
-    &:hover {
-      color: ${colors.grey};
-      opacity: 0.8;
-    }
-
     &.active {
       color: ${colors.yellow};
     }
+  }
+`;
+
+export const FavoriteStar = styled(YellowButton)`
+  &:hover {
+    color: ${colors.grey};
+    opacity: 0.8;
   }
 `;

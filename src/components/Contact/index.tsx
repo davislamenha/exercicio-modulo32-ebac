@@ -6,13 +6,7 @@ import { useDispatch } from 'react-redux';
 import { edit, remove, switchFavorite } from '../../store/reducers/contacts';
 import ContactClass from '../../models/Contact';
 import * as S from './styles';
-import {
-  Button,
-  GreenButton,
-  Input,
-  RedButton,
-  YellowButton,
-} from '../../styles';
+import { Button, GreenButton, Input, RedButton } from '../../styles';
 
 type ContactProps = ContactClass;
 
@@ -104,12 +98,12 @@ const Contact = ({
             <Button onClick={() => setEditing(true)}>
               <PencilSimple weight="fill" size={24} />
             </Button>
-            <YellowButton
+            <S.FavoriteStar
               className={favorite ? 'active' : ''}
               onClick={() => dispatch(switchFavorite(id))}
             >
               <Star weight="fill" size={24} />
-            </YellowButton>
+            </S.FavoriteStar>
           </Zoom>
         )}
       </S.Actions>
