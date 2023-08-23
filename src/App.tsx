@@ -4,6 +4,7 @@ import { GlobalStyle } from './styles';
 import store from './store';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Favorites from './pages/Favorites';
+import NewContact from './pages/NewContact';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: '/favoritos',
     element: <Favorites />,
+  },
+  {
+    path: '/new',
+    element: <NewContact />,
   },
 ]);
 

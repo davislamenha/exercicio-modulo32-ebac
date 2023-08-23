@@ -1,9 +1,9 @@
+import { Fade } from 'react-awesome-reveal';
 import { RootReducer } from '../../store';
 import { useSelector } from 'react-redux';
 
 import { MainContainer, Table, Title } from './styles';
 import Contact from '../../components/Contact';
-import { Fade } from 'react-awesome-reveal';
 
 type Props = {
   favorites?: boolean;

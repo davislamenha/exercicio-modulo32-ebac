@@ -11,10 +11,12 @@ const NavigationBar = () => {
       <Slide>
         <List>
           <li>
-            <GreenButton>
-              <UserPlus weight="fill" size={20} />
-              Adicionar Contato
-            </GreenButton>
+            <Link to={'/new'}>
+              <GreenButton>
+                <UserPlus weight="fill" size={20} />
+                Adicionar Contato
+              </GreenButton>
+            </Link>
           </li>
           <li>
             <Link to={'/'}>
